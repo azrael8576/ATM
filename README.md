@@ -10,11 +10,18 @@ ATM app  _ launch Google Play
 
 ver3.0
 
-2018/10/24
 
 *正式啟用GoogleMap功能
 
 ver.3.1
+
+*修復 主頁面>投資理財>新增 異常
+
+ver.3.3
+
+*新增功能：利用ActionBar將手機聯絡人傳送至FireBase-DB
+
+ver.3.4
 
 
 copyright HE,XUAN-WEI
