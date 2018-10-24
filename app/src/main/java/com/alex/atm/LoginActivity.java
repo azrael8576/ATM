@@ -3,6 +3,7 @@ package com.alex.atm;
 import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edPasswd;
     private CheckBox cbRemember;
     private Intent helloService;
+    private String passwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,18 +185,18 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         final String userid = edUserid.getText().toString();
         final String passwd = edPasswd.getText().toString();
-//        if ("alex".equals(userid) && "1234".equals(passwd)){
-//            setResult(RESULT_OK);
-//            finish();
-//        }
+
         FirebaseDatabase.getInstance().getReference("users").child(userid).child("password")
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
+
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String pw = (String) dataSnapshot.getValue();
-                        if (pw.equals(passwd)){
-                            boolean remember = getSharedPreferences("atm",MODE_PRIVATE)
-                                    .getBoolean("REMEMBER_USERID",false);
+                        if (pw == null)
+                            pw = "";
+                        if (!"".equals(passwd) && !"".equals(userid) && pw.equals(passwd)){
+                            boolean remember = getSharedPreferences("atm", MODE_PRIVATE)
+                                    .getBoolean("REMEMBER_USERID", false);
                             if (remember) {
                                 //save userid
                                 getSharedPreferences("atm", MODE_PRIVATE)
@@ -219,8 +221,47 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-    }
-    public void quit(View view){
 
+    }
+    public void signup(View view){
+        final String userid = edUserid.getText().toString();
+        final String passwd = edPasswd.getText().toString();
+        new AlertDialog.Builder(LoginActivity.this)
+                .setTitle("註冊會員")
+                .setMessage("帳號 ：" + userid + " 是否註冊 ?")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseDatabase.getInstance().getReference("users")
+                                .child(userid).child("password").addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String pw = (String) dataSnapshot.getValue();
+                                        if (pw == null && passwd !=""){
+                                            FirebaseDatabase.getInstance().getReference("users")
+                                                    .child(userid).child("password").setValue(passwd);
+                                            new AlertDialog.Builder(LoginActivity.this)
+                                                    .setTitle("註冊成功")
+                                                    .setPositiveButton("OK",null)
+                                                    .show();
+                                        }
+                                        else {
+                                            new AlertDialog.Builder(LoginActivity.this)
+                                                    .setTitle("註冊失敗")
+                                                    .setMessage("此帳號已被註冊或未輸入密碼")
+                                                    .setPositiveButton("OK",null)
+                                                    .show();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
+                    }
+                })
+                .setNegativeButton("NO",null)
+                .show();
     }
 }
