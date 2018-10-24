@@ -10,11 +10,14 @@ ATM app  _ launch Google Play
 
 ver3.0
 
-2018/10/24
 
 *正式啟用GoogleMap功能
 
 ver.3.1
+
+*修復 主頁面>投資理財>新增 異常
+
+ver.3.2
 
 
 copyright HE,XUAN-WEI
