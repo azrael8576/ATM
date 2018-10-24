@@ -19,5 +19,9 @@ ver.3.1
 
 ver.3.3
 
+*新增功能：利用ActionBar將手機聯絡人傳送至FireBase-DB
+
+ver.3.4
+
 
 copyright HE,XUAN-WEI
