@@ -195,8 +195,9 @@ public class LoginActivity extends AppCompatActivity {
                         if (pw == null)
                             pw = "";
                         if (!"".equals(passwd) && !"".equals(userid) && pw.equals(passwd)){
-                            boolean remember = getSharedPreferences("atm", MODE_PRIVATE)
-                                    .getBoolean("REMEMBER_USERID", false);
+//                            boolean remember = getSharedPreferences("atm", MODE_PRIVATE)
+//                                    .getBoolean("REMEMBER_USERID", false);
+                            boolean remember = true;
                             if (remember) {
                                 //save userid
                                 getSharedPreferences("atm", MODE_PRIVATE)
