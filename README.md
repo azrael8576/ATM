@@ -23,5 +23,11 @@ ver.3.3
 
 ver.3.4
 
+*新增功能:畫面標題提示
+
+*新增語系:英文
+
+ver.3.5
+
 
 copyright HE,XUAN-WEI
