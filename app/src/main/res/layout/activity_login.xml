@@ -36,7 +36,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
-        android:text="帳號"
+        android:text="@string/account"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="密碼"
+        android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="@+id/userid"
         app:layout_constraintTop_toBottomOf="@+id/userid" />
@@ -79,7 +79,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:onClick="login"
-        android:text="登入"
+        android:text="@string/signin"
         app:layout_constraintStart_toStartOf="@+id/passwd"
         app:layout_constraintTop_toBottomOf="@+id/passwd" />
 
@@ -91,7 +91,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:onClick="signup"
-        android:text="註冊"
+        android:text="@string/signup"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/passwd" />
 
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="記住帳號"
+        android:text="@string/remember_account"
         app:layout_constraintStart_toEndOf="@+id/userid"
         app:layout_constraintTop_toTopOf="@+id/userid" />
 
@@ -131,7 +131,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="map"
-        android:text="Map"
+        android:text="@string/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -40,14 +40,14 @@ public class AddActivity extends AppCompatActivity {
             long id = helper.getWritableDatabase()
                     .insert("expense",null,values);
             if (id > -1){
-                Toast.makeText(this,"新增成功",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,getString(R.string.success),Toast.LENGTH_LONG).show();
             }
             else{
-                Toast.makeText(this,"新增失敗",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,getString(R.string.failed),Toast.LENGTH_LONG).show();
             }
         }
         else{
-            Toast.makeText(this,"新增失敗",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.failed),Toast.LENGTH_LONG).show();
         }
     }
 }

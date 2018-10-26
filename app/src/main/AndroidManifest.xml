@@ -34,13 +34,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ContactActivity" />
+        <activity android:name=".ContactActivity"
+            android:label="@string/title_activity_contacts"/>
         <activity
             android:name=".FinanceActivity"
             android:label="@string/title_activity_finance"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddActivity" />
-        <activity android:name=".TransActivity" />
+        <activity android:name=".AddActivity"
+            android:label="@string/title_activity_add"/>
+        <activity android:name=".TransActivity"
+            android:label="@string/title_activity_transaction"/>
 
         <service android:name=".HelloService" />
         <!--

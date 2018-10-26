@@ -210,9 +210,9 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else {
                             new AlertDialog.Builder(LoginActivity.this)
-                                    .setTitle("登入結果")
-                                    .setMessage("登入失敗")
-                                    .setPositiveButton("OK",null)
+                                    .setTitle(R.string.login_failed)
+                                    .setMessage(R.string.login_failed_info)
+                                    .setPositiveButton(R.string.ok,null)
                                     .show();
                         }
                     }
@@ -228,9 +228,9 @@ public class LoginActivity extends AppCompatActivity {
         final String userid = edUserid.getText().toString();
         final String passwd = edPasswd.getText().toString();
         new AlertDialog.Builder(LoginActivity.this)
-                .setTitle("註冊會員")
-                .setMessage("帳號 ：" + userid + " 是否註冊 ?")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.signup)
+                .setMessage("帳號: " + userid + " 是否註冊?")
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDatabase.getInstance().getReference("users")
@@ -242,15 +242,15 @@ public class LoginActivity extends AppCompatActivity {
                                             FirebaseDatabase.getInstance().getReference("users")
                                                     .child(userid).child("password").setValue(passwd);
                                             new AlertDialog.Builder(LoginActivity.this)
-                                                    .setTitle("註冊成功")
-                                                    .setPositiveButton("OK",null)
+                                                    .setTitle(R.string.reg_success)
+                                                    .setPositiveButton(R.string.ok,null)
                                                     .show();
                                         }
                                         else {
                                             new AlertDialog.Builder(LoginActivity.this)
-                                                    .setTitle("註冊失敗")
-                                                    .setMessage("此帳號已被註冊或未輸入密碼")
-                                                    .setPositiveButton("OK",null)
+                                                    .setTitle(R.string.sign_up_failed)
+                                                    .setMessage(R.string.sign_up_failed_info)
+                                                    .setPositiveButton(R.string.ok,null)
                                                     .show();
                                         }
                                     }
@@ -262,7 +262,7 @@ public class LoginActivity extends AppCompatActivity {
                                 });
                     }
                 })
-                .setNegativeButton("NO",null)
+                .setNegativeButton(R.string.cancel,null)
                 .show();
     }
 }
