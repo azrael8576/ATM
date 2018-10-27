@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.UIkit;
 
 public class Function {
     String name;

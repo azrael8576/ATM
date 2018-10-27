@@ -1,7 +1,6 @@
-package com.alex.atm;
+package com.alex.atm.Activity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.provider.ContactsContract;
@@ -19,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.alex.atm.UIkit.Contact;
+import com.alex.atm.R;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;

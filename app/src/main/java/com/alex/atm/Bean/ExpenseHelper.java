@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Bean;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

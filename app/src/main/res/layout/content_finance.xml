@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".FinanceActivity"
+    tools:context=".Activity.FinanceActivity"
     tools:showIn="@layout/activity_finance">
 
     <android.support.v7.widget.RecyclerView

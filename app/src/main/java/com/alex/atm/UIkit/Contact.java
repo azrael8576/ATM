@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.UIkit;
 
 import java.util.ArrayList;
 import java.util.List;

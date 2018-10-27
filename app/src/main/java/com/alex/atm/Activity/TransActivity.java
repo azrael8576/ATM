@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Activity;
 
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
@@ -11,19 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.alex.atm.R;
+import com.alex.atm.UIkit.Transaction;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;

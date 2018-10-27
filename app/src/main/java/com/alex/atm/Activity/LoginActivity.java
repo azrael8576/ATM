@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Activity;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -11,7 +11,6 @@ import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
@@ -21,11 +20,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.Checkable;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.alex.atm.Bean.HelloService;
+import com.alex.atm.Fragment.NewsFragment;
+import com.alex.atm.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;

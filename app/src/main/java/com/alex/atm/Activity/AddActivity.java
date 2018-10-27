@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Activity;
 
 import android.content.ContentValues;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.alex.atm.Bean.ExpenseHelper;
+import com.alex.atm.R;
 
 public class AddActivity extends AppCompatActivity {
 

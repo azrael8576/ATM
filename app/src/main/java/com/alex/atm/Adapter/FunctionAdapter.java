@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.alex.atm.R;
 
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.FunctionViewHolder>{
     private final String[] functions;

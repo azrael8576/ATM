@@ -1,4 +1,4 @@
-package com.alex.atm;
+package com.alex.atm.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.alex.atm.R;
 
 public class NewsFragment extends Fragment {
     private static final String TAG = NewsFragment.class.getSimpleName();
