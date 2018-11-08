@@ -15,11 +15,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alex.atm.UIkit.Function;
 import com.alex.atm.R;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +65,23 @@ public class MainActivity extends AppCompatActivity {
 //        FunctionAdapter adapter = new FunctionAdapter(this);
         IconAdapter adapter = new IconAdapter();
         recyclerView.setAdapter(adapter);
+
+
+//        CrashTest();
+    }
+
+    private void CrashTest() {
+        Button crashButton = new Button(this);
+        crashButton.setText("Crash!");
+        crashButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Crashlytics.getInstance().crash(); // Force a crash
+            }
+        });
+
+        addContentView(crashButton, new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     private void setupFunctions() {

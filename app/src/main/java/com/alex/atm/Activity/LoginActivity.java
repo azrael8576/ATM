@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.alex.atm.Bean.HelloService;
 import com.alex.atm.Fragment.NewsFragment;
 import com.alex.atm.R;
+import com.crashlytics.android.Crashlytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -67,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 //        settingTest();
         findViews();
         new TestTask().execute("http://google.com.tw");
+
     }
 
     BroadcastReceiver receiver = new BroadcastReceiver() {
