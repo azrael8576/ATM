@@ -12,18 +12,18 @@ android {
         applicationId "com.alex.atm"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 8
-        versionName "3.5"
+        versionCode 9
+        versionName "3.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         debug {
-            manifestPlaceholders = [crashlyticsEnabled:"false"]
+            manifestPlaceholders = [crashlyticsEnabled: "false"]
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [crashlyticsEnabled:"true"]
+            manifestPlaceholders = [crashlyticsEnabled: "true"]
         }
     }
 }

@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                String nickname = getSharedPreferences("user",MODE_PRIVATE)
+                        .getString("NICKNAME",null);
+                Snackbar.make(view, "Welcome "+ nickname + ".", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -158,7 +160,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode==REQUEST_LOGIN){
-            if (resultCode != RESULT_OK){
+            if (resultCode == RESULT_OK){
+                logon = true;
+                String nick = getSharedPreferences("user",MODE_PRIVATE)
+                        .getString("NICKNAME",null);
+                int age = getSharedPreferences("user",MODE_PRIVATE)
+                        .getInt("AGE",0);
+                int gender = getSharedPreferences("user",MODE_PRIVATE)
+                        .getInt("GENDER",0);
+                if (nick == null || age == 0 || gender ==0) {
+                    //進入Nickname Activity
+                    Intent nickname = new Intent(this, NicknameActivity.class);
+                    startActivity(nickname);
+                }
+            }
+            else{
                 finish();
             }
         }
