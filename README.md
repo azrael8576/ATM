@@ -38,4 +38,12 @@ Firebase Crashlytics
 ver.3.6
 
 
+2018/11/21
+
+
+Save Nickname & Age & Gender-SharedPreferences
+
+ver.3.7
+
+
 copyright HE,XUAN-WEI
