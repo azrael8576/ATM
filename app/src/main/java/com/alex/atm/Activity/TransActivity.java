@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alex.atm.R;
+import com.alex.atm.UIkit.Function;
 import com.alex.atm.UIkit.Transaction;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

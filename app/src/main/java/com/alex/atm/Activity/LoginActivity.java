@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        IntentFilter filter = new IntentFilter(HelloService.ACTION_HELLO_DONE);
+        IntentFilter filter = new IntentFilter(HelloService.Companion.getACTION_HELLO_DONE());
         registerReceiver(receiver,filter);
     }
 
